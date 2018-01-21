@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/secre"
+        android:visible="false"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/activar"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/act" />
+        <item
+            android:id="@+id/asistencia"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/masistencia" />
+        <item
+            android:id="@+id/usuarios"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/musu" />
+        <item
+            android:id="@+id/expositores"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/regexp" />
+        <item
+            android:id="@+id/cronograma"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/mcro" />
+        <item
+            android:id="@+id/talleres"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/mtall" />
+        <item
+            android:id="@+id/moponentes"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/mponen" />
+    </group>
+    <group
+        android:id="@+id/admin"
+        android:visible="false"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/asistenciar"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/pasistencia" />
+        <item
+            android:id="@+id/cronogramaad"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/mcro" />
+    </group>
+    <group
+        android:id="@+id/asist"
+        android:visible="false"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/asistenciaa"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/masistencia" />
+        <item
+            android:id="@+id/inscripcionr"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/rinscripcion" />
+        <item
+            android:id="@+id/cronogramaas"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/mcro" />
+    </group>
+
+    <item android:title="@string/com">
+        <menu>
+            <item
+                android:id="@+id/contacto"
+                android:icon="@mipmap/ic_launcher_round"
+                android:title="@string/ate" />
+            <item
+                android:id="@+id/cerrar"
+                android:icon="@mipmap/ic_launcher_round"
+                android:title="@string/cerrar" />
+        </menu>
+    </item>
+
+</menu>

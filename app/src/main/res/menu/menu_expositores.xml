@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/re"
+        android:orderInCategory="100"
+        android:title="@string/re"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/rc"
+        android:orderInCategory="100"
+        android:title="@string/rc"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/rt"
+        android:orderInCategory="100"
+        android:title="@string/rt"
+        app:showAsAction="never" />
+    <!--<item
+        android:id="@+id/modificari"
+        android:orderInCategory="100"
+        android:title="@string/modificar"
+        app:showAsAction="never" />-->
+</menu>

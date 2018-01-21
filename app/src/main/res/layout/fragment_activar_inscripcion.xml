@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:orientation="vertical"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context="com.example.globaltics.caqr.Fragments.ActivarInscripcion">
+
+<!-- TODO: Update blank fragment layout -->
+    <SearchView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:padding="10dp" />
+
+    <!--<ListView
+        android:id="@+id/inscritos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv">
+
+    </ListView>-->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <!--<ListView
+            android:id="@+id/inscritos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:layout_alignTop="@+id/nodata" />-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/inscritos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:visibility="visible">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

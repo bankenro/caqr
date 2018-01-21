@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">XVII CISAISI</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Estamos trabajando en ello</string>
+    <string name="refrehs">Ocurrio un Problema  Touchme Please</string>
+    <string name="title_activity_navigation">XVII CISAISI</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="contraseña">contraseña</string>
+    <string name="codigo">Usuario</string>
+    <string name="login">IMGRESAR</string>
+    <string name="register">REGISTRAR</string>
+    <string name="registro">REGISTRO</string>
+    <string name="nombre">Nombres</string>
+    <string name="apellidop">Apellido Paterno</string>
+    <string name="apellidom">Apellido Materno</string>
+    <string name="lnacimiento">Lugar de Nacimiento</string>
+    <string name="dep">Departamento</string>
+    <string name="prov">Provincia</string>
+    <string name="distr">Distrito</string>
+    <string name="correo">Correo</string>
+    <string name="tcodumento">Tipo de Documento</string>
+    <string name="documento">Numero de Documento</string>
+    <string name="genero">Genero</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="telefono">Telefono</string>
+    <string name="nacimiento">Fecha de Nacimiento</string>
+    <string name="logins">Iniciando Sesion</string>
+    <string name="registrar">REGISTRAR</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="act">Activar Inscripcion</string>
+    <string name="masistencia">Mostrar Asistencia</string>
+    <string name="pasistencia">Registrar Asistencia</string>
+    <string name="rinscripcion">Inscripcion</string>
+    <string name="cerrar">Cerrar Sesion</string>
+    <string name="ate">Pagina de FB</string>
+    <string name="com">Contacto</string>
+    <string name="regentr">Registrar Ingreso</string>
+    <string name="regsal">Registrar Salida</string>
+    <string name="insr">INSCRIPCION</string>
+    <string name="baucher">Baucher</string>
+    <string name="Inscripciones">Inscripcion</string>
+    <string name="nodata">NO TIENE INSCRIPCIONES PREVIAS</string>
+    <string name="enviar">Enviar</string>
+    <string name="act_us">Activar Inscripcion</string>
+    <string name="activar">Activar</string>
+    <string name="modificar">Modificar</string>
+    <string name="anr">ASISTENCIA NO REGISTRADA</string>
+    <string name="musu">Mostrar Usuarios</string>
+    <string name="regexp">Registrar Ponencias</string>
+    <string name="regcro">Registrar Cronograma</string>
+    <string name="regtall">Registrar Talleres</string>
+    <string name="actuu">Tipo Usuario</string>
+    <string name="re">Registrar Ponentes</string>
+    <string name="rc">Registrar Cronograma</string>
+    <string name="rt">Registrar Talleres</string>
+    <string name="pais">PAIS</string>
+    <string name="intro">Introduccion</string>
+    <string name="hf">Hora Finalizacion</string>
+    <string name="fecha">Fecha</string>
+    <string name="horai">Hora Inicio</string>
+    <string name="tpon">Titulo de Ponencia </string>
+    <string name="ttal">Titulo Taller</string>
+    <string name="mcro">Mostrar Cronograma</string>
+    <string name="mtall">Mostrar Talleres</string>
+    <string name="mponen">Mostrar Ponentes</string>
+</resources>
