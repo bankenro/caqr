@@ -39,6 +39,7 @@ public class NavigationActivity extends AppCompatActivity
     private String tipo,nombre,image,tipos,codigou;
     private Bitmap foto;
     public static final String urla = "http://192.168.1.38/caqr/entrada.php";
+    public static final String TAG = "error";
     //public static final String urla = "https://nationfis.000webhostapp.com/caqr/entrada.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {

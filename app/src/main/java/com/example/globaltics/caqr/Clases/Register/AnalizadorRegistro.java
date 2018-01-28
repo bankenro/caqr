@@ -1,7 +1,9 @@
 package com.example.globaltics.caqr.Clases.Register;
 
 import android.content.Context;
+import android.nfc.Tag;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,6 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import static com.example.globaltics.caqr.Activitys.NavigationActivity.TAG;
 import static com.example.globaltics.caqr.Activitys.NavigationActivity.urla;
 
 
