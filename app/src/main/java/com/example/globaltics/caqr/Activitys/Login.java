@@ -26,6 +26,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         SharedPreferences preferences = getSharedPreferences("datos", Context.MODE_PRIVATE);
         tipo = preferences.getString("a","");
         nombre = preferences.getString("nombre","");
