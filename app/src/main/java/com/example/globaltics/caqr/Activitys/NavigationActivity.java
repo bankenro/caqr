@@ -36,10 +36,11 @@ import com.example.globaltics.caqr.R;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private String tipo,nombre,image,tipos,codigou;
+    private String tipo, nombre, image, tipos, codigou;
     private Bitmap foto;
-    public static final String urla = "http://192.168.1.38/caqr/entrada.php";
+    public static final String urla = "http://192.168.1.75/caqr/entrada.php";
     public static final String TAG = "error";
+
     //public static final String urla = "https://nationfis.000webhostapp.com/caqr/entrada.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +52,15 @@ public class NavigationActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Fragment fragment = new MainFragment();
-        fragmentTransaction.add(R.id.contenedorn,fragment);
+        fragmentTransaction.add(R.id.contenedorn, fragment);
         fragmentTransaction.commit();
 
         SharedPreferences preferences = getSharedPreferences("datos", Context.MODE_PRIVATE);
-        tipo = preferences.getString("a","");
-        nombre = preferences.getString("nombre","");
-        image = preferences.getString("image","");
-        tipos = preferences.getString("tipos","");
-        codigou = preferences.getString("codigo","");
+        tipo = preferences.getString("a", "");
+        nombre = preferences.getString("nombre", "");
+        image = preferences.getString("image", "");
+        tipos = preferences.getString("tipos", "");
+        codigou = preferences.getString("codigo", "");
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -85,7 +86,7 @@ public class NavigationActivity extends AppCompatActivity
 
         navigationView.setNavigationItemSelectedListener(this);
         View view = navigationView.getHeaderView(0);
-        TextView nombret = (TextView)view.findViewById(R.id.nombre);
+        TextView nombret = (TextView) view.findViewById(R.id.nombre);
         TextView codigo = (TextView) view.findViewById(R.id.codigo);
         TextView tipot = (TextView) view.findViewById(R.id.tipo);
         ImageView fotot = (ImageView) view.findViewById(R.id.foto);
@@ -95,7 +96,7 @@ public class NavigationActivity extends AppCompatActivity
         codigo.setText(codigou);
 
         byte[] byteImage = Base64.decode(image, Base64.DEFAULT);
-        foto = BitmapFactory.decodeByteArray( byteImage, 0, byteImage.length);
+        foto = BitmapFactory.decodeByteArray(byteImage, 0, byteImage.length);
         fotot.setImageBitmap(foto);
     }
 
@@ -110,8 +111,7 @@ public class NavigationActivity extends AppCompatActivity
             if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
                 getSupportFragmentManager().popBackStack();
                 getSupportFragmentManager().beginTransaction().commit();
-            }
-            else {
+            } else {
                 super.onBackPressed();
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addCategory(Intent.CATEGORY_HOME);
@@ -131,23 +131,23 @@ public class NavigationActivity extends AppCompatActivity
         boolean fragmentTransaction = false;
         Fragment fragment = null;
         Bundle bundle = new Bundle();
-        switch (id){
+        switch (id) {
             case R.id.activar:
                 fragment = new ActivarInscripcion();
                 fragmentTransaction = true;
-                bundle.putString("accion","inscritos");
+                bundle.putString("accion", "inscritos");
                 fragment.setArguments(bundle);
                 break;
             case R.id.usuarios:
                 fragment = new ActivarInscripcion();
                 fragmentTransaction = true;
-                bundle.putString("accion","usuarios");
+                bundle.putString("accion", "usuarios");
                 fragment.setArguments(bundle);
                 break;
             case R.id.expositores:
                 fragment = new ActivarInscripcion();
                 fragmentTransaction = true;
-                bundle.putString("accion","expositores");
+                bundle.putString("accion", "expositores");
                 fragment.setArguments(bundle);
                 break;
             case R.id.cronograma:
@@ -155,6 +155,14 @@ public class NavigationActivity extends AppCompatActivity
                 fragmentTransaction = true;
                 break;
             case R.id.talleres:
+                fragment = new MostrarTalleres();
+                fragmentTransaction = true;
+                break;
+            case R.id.talleresas:
+                fragment = new MostrarTalleres();
+                fragmentTransaction = true;
+                break;
+            case R.id.talleresad:
                 fragment = new MostrarTalleres();
                 fragmentTransaction = true;
                 break;
@@ -193,14 +201,14 @@ public class NavigationActivity extends AppCompatActivity
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.clear();
                 editor.apply();
-                Intent intent = new Intent(NavigationActivity.this,Login.class);
+                Intent intent = new Intent(NavigationActivity.this, Login.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 break;
         }
-        if(fragmentTransaction){
+        if (fragmentTransaction) {
             //getSupportFragmentManager().beginTransaction().replace(R.id.contenedorn,fragment).addToBackStack(null).commit();
-            getSupportFragmentManager().beginTransaction().replace(R.id.contenedorn,fragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedorn, fragment).commit();
             item.setChecked(true);
             //getSupportActionBar().setTitle(item.getTitle());
             setTitle(item.getTitle());

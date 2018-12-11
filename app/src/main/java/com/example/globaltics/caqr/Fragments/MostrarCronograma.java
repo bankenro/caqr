@@ -2,6 +2,7 @@ package com.example.globaltics.caqr.Fragments;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -15,6 +16,8 @@ import com.example.globaltics.caqr.Clases.Views.MostrarEventos.DescargaCronogram
 import com.example.globaltics.caqr.R;
 import com.kosalgeek.android.md5simply.MD5;
 
+import java.util.Objects;
+
 import static com.example.globaltics.caqr.Activitys.NavigationActivity.urla;
 
 /**
@@ -26,13 +29,13 @@ public class MostrarCronograma extends Fragment implements View.OnClickListener,
     public MostrarCronograma() {
         // Required empty public constructor
     }
-    private String di;
+
     private RecyclerView cronograma;
     private TextView dia1t,dia2t,dia3t,dia4t;
     private SwipeRefreshLayout swipeRefreshLayout;
     private String di1 = "2017-10-03";
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_mostrar_cronograma, container, false);
@@ -62,7 +65,7 @@ public class MostrarCronograma extends Fragment implements View.OnClickListener,
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.dia1:
-                di = "2018-01-18";
+                String di = "2018-01-18";
                 restaurarcolor();
                 cambiarcolor(dia1t);
                 descargar(di);
@@ -89,7 +92,7 @@ public class MostrarCronograma extends Fragment implements View.OnClickListener,
     }
 
     private void cambiarcolor(TextView dia1tc) {
-        dia1tc.setTextColor(ContextCompat.getColor(getActivity(), R.color.blanco));
+        dia1tc.setTextColor(ContextCompat.getColor(Objects.requireNonNull(getActivity()), R.color.blanco));
         dia1tc.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.celeste));
     }
 
@@ -100,7 +103,7 @@ public class MostrarCronograma extends Fragment implements View.OnClickListener,
     }
 
     private void restaurarcolor() {
-        dia1t.setTextColor(ContextCompat.getColor(getActivity(), R.color.negro));
+        dia1t.setTextColor(ContextCompat.getColor(Objects.requireNonNull(getActivity()), R.color.negro));
         dia1t.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.blanco));
         dia2t.setTextColor(ContextCompat.getColor(getActivity(), R.color.negro));
         dia2t.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.blanco));

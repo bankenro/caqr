@@ -46,6 +46,10 @@
             android:id="@+id/cronogramaad"
             android:icon="@mipmap/ic_launcher_round"
             android:title="@string/mcro" />
+        <item
+            android:id="@+id/talleresad"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/mtall" />
     </group>
     <group
         android:id="@+id/asist"
@@ -63,6 +67,10 @@
             android:id="@+id/cronogramaas"
             android:icon="@mipmap/ic_launcher_round"
             android:title="@string/mcro" />
+        <item
+            android:id="@+id/talleresas"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/mtall" />
     </group>
 
     <item android:title="@string/com">
